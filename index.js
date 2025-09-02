@@ -1,9 +1,8 @@
 class shape {
-    constructor(width, height, color, shapetype) {
+    constructor(width, height, color) {
         this.width = width;
         this.height = height;
         this.color = color;
-        this.shapetype = shapetype;
     }
 }
 
@@ -14,16 +13,16 @@ function calculateArea(shapeItem) {
 }
 
 function calculatePerimeter(shapeItem) {
-   let perimeter = (shapeItem.width + shapeItem.height) * 2;
+    let perimeter = (shapeItem.width + shapeItem.height) * 2;
     return perimeter;
 }
 
 function determineShapeType(shapeItem) {
-   if (shapeItem.width === shapeItem.height) {
+    if (shapeItem.width === shapeItem.height) {
     shapetype = 'square';
-   } else {
+    } else {
     shapetype = 'rectangle';
-   }
+    }
     return shapetype;
 }
 

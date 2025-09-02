@@ -13,14 +13,17 @@ function calculateArea(shapeItem) {
 }
 
 function calculatePerimeter(shapeItem) {
-    // TODO: Implement the function to calculate the shape perimeter
-    return 'to be implemented';
+    let perimeter = (shapeItem.width + shapeItem.height) * 2;
+    return perimeter;
 }
 
 function determineShapeType(shapeItem) {
-    //TODO: Implement the function to determine the shape type (square or rectangle)
-    // Hint: The function should return "square" if the width and height are equal, and "rectangle" otherwise.
-    return 'to be implemented';
+    if (shapeItem.width === shapeItem.height) {
+    shapetype = 'square';
+    } else {
+    shapetype = 'rectangle';
+    }
+    return shapetype;
 }
 
 let shapes = [
@@ -31,13 +34,24 @@ let shapes = [
 
 shapes.forEach(function (shapeItem, index) {
     let area = calculateArea(shapeItem);
+   
+    let shapetype = determineShapeType(shapeItem);
 
-    let result = 'The shape area is: ' + area;
+    let perimeter = calculatePerimeter(shapeItem);
+   
+    result = 'The shape area is: ' + area;
 
     result += '\n';
+    
+    result += 'The shape perimeter is: ' + perimeter;
+
+    result += '\n';
+
     result += 'The shape color is: ' + shapeItem.color;
 
     result += '\n';
+
+    result += 'The shape shapetype is: ' + shapetype;
 
     // TODO: Update the result to show the shape type and perimeter
 

@@ -6,14 +6,10 @@ class shape {
     }
 }
 
-let shapes = [
-    new shape(100, 100, "red"),
-    new shape(200, 100, "blue"),
-    new shape(100, 300, "green"),
-];
-
 function calculateArea(shapeItem) {
-    return shapeItem.width * shapeItem.height;
+    let area = shapeItem.width * shapeItem.height;
+
+    return area;
 }
 
 function calculatePerimeter(shapeItem) {
@@ -26,6 +22,12 @@ function determineShapeType(shapeItem) {
     // Hint: The function should return "square" if the width and height are equal, and "rectangle" otherwise.
     return 'to be implemented';
 }
+
+let shapes = [
+    new shape(100, 100, "red"),
+    new shape(200, 100, "blue"),
+    new shape(100, 300, "green"),
+];
 
 shapes.forEach(function (shapeItem, index) {
     let area = calculateArea(shapeItem);
